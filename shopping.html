@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shopping</title>
+
+<style>
+
+/* BODY */
+body {
+    margin: 0;
+    background: gainsboro;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* NAVBAR (TOP) */
+.navbar {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, #ff9eb5, #ff6f91);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+}
+
+/* CONTAINER */
+.container {
+    padding: 20px;
+}
+
+/* GRID */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* CARD */
+.card {
+    width: calc(33.33% - 20px);
+    height: 350px;
+    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+/* TEXT */
+.card .text {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* BUTTON */
+.buy-btn {
+    padding: 8px 15px;
+    background: #ff6f91;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background: #ff4d88;
+    transform: scale(1.1);
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .navbar {
+        height: 60px;
+        gap: 15px;
+        font-size: 14px;
+    }
+}
+.beu{
+    color: antiquewhite;
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="#">Product</a>
+    <a href="aboutus.html">About</a>
+    <a href="feedback.html">Feedback</a>
+</div>
+
+<!-- CARDS -->
+<div class="container">
+<div class="card-container">
+<div class="card">
+    <img src="makeup.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="Accessories.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="duck_band.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="card-container">
+
+<div class="card">
+    <img src="peacook_band.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="pink_heel.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="black_heel.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="card-container">
+<div class="card">
+    <img src="blackheel1.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="diamond_heel.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="stone_necklace.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+
+    </div>
+</div>
+
+
+
+</div>
+</div>
+<div class="card-container">
+<div class="card">
+    <img src="diamond_jewellery.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="squre_necklace.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="hand.jpg">
+    <div class="text">
+        <span class="beu">Beautiful Item</span>
+        <button class="buy-btn" <a href="payment.html">I WANT THIS</a></button>
+    </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - MAJESTY STORE</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background:linear-gradient(to bottom,#fff0f7,#ffe5f1);
+    overflow-x:hidden;
+    color:#444;
+}
+
+/* HEADER */
+
+.about-header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:25px;
+    padding:50px 20px;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.logo-circle{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:6px solid #ff8ec7;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 5px 25px rgba(255,105,180,0.3);
+}
+
+.logo-circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.store-heading h1{
+    font-size:52px;
+    color:#ff4fa3;
+    text-shadow:0 0 12px white;
+}
+
+.store-heading p{
+    margin-top:10px;
+    font-size:18px;
+    color:#777;
+}
+
+/* ABOUT BOX */
+
+.about-box{
+    max-width:1000px;
+    margin:20px auto;
+    background:white;
+    padding:35px;
+    border-radius:35px;
+    box-shadow:0 10px 30px rgba(255,105,180,0.15);
+    border:2px solid #ffd2e7;
+    text-align:center;
+}
+
+.about-box h2{
+    color:#ff4fa3;
+    margin-bottom:15px;
+    font-size:34px;
+}
+
+.about-box p{
+    line-height:1.9;
+    font-size:17px;
+    color:#666;
+}
+
+/* CATEGORY FLEX CARDS */
+
+.category-section{
+    padding:50px 20px;
+}
+
+.category-title{
+    text-align:center;
+    color:#ff4fa3;
+    font-size:38px;
+    margin-bottom:35px;
+}
+
+.category-cards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.category-card{
+    width:240px;
+    background:white;
+    padding:30px 20px;
+    border-radius:30px;
+    text-align:center;
+    transition:0.4s;
+    border:2px solid #ffd6e9;
+    box-shadow:0 8px 25px rgba(255,105,180,0.12);
+}
+
+.category-card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.category-card h3{
+    color:#ff4fa3;
+    margin-top:15px;
+    margin-bottom:10px;
+}
+
+.category-card p{
+    color:#666;
+    line-height:1.6;
+}
+
+/* SMALL BRAND CIRCLES */
+
+.brand-section{
+    padding:40px 20px;
+}
+
+.brand-title{
+    text-align:center;
+    font-size:36px;
+    color:#ff4fa3;
+    margin-bottom:35px;
+}
+
+.brand-flex{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.brand-circle{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:5px solid #ff9fcd;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 5px 20px rgba(255,105,180,0.2);
+    transition:0.4s;
+}
+
+.brand-circle:hover{
+    transform:scale(1.1);
+}
+
+.brand-circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* CONTACT SECTION */
+
+.contact-section{
+    max-width:1000px;
+    margin:50px auto;
+    background:linear-gradient(to right,#ffb6d9,#ffd8ea);
+    padding:40px;
+    border-radius:35px;
+    color:white;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(255,105,180,0.25);
+}
+
+.contact-section h2{
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+.contact-grid{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.contact-card{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(5px);
+    padding:20px;
+    width:240px;
+    border-radius:25px;
+}
+
+.contact-card h3{
+    margin-bottom:10px;
+}
+
+/* EXTRA QUOTE */
+
+.quote-box{
+    text-align:center;
+    margin:60px 20px;
+    color:#ff4fa3;
+    font-size:28px;
+    font-weight:bold;
+    line-height:1.7;
+}
+
+/* FLOATING EFFECT */
+
+.floating{
+    position:fixed;
+    font-size:24px;
+    opacity:0.5;
+    animation:float 6s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) rotate(0deg);
+    }
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.store-heading h1{
+    font-size:36px;
+}
+
+.about-box h2,
+.category-title,
+.brand-title,
+.contact-section h2{
+    font-size:28px;
+}
+
+.about-box p{
+    font-size:15px;
+}
+
+.category-card{
+    width:100%;
+    max-width:320px;
+}
+
+.contact-card{
+    width:100%;
+    max-width:300px;
+}
+
+.quote-box{
+    font-size:22px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="about-header">
+
+    <div class="logo-circle">
+        <img src="ocean_logo.jpg">
+    </div>
+
+    <div class="store-heading">
+        <h1>💖 MAJESTY STORE 💖</h1>
+        <p>Elegant • Cute • Aesthetic • Premium</p>
+    </div>
+
+</div>
+
+<!-- ABOUT STORE -->
+
+<div class="about-box">
+
+    <h2>🌸 About Our Store 🌸</h2>
+
+    <p>
+        Welcome to MAJESTY STORE — your aesthetic fashion and beauty destination.
+        We provide premium quality products including skincare, clothes, dresses,
+        footwear, accessories and many more trendy collections.
+        Our goal is to make every customer feel stylish, confident and happy
+        with cute and modern products at affordable prices.
+    </p>
+
+</div>
+
+<!-- CATEGORY SECTION -->
+
+<div class="category-section">
+
+    <h2 class="category-title">✨ Our Collections ✨</h2>
+
+    <div class="category-cards">
+
+        <div class="category-card">
+            <h3>💄 Skin Care</h3>
+
+            <p>
+                Face wash, creams, serums, beauty products and glow essentials.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <h3>👗 Dresses</h3>
+
+            <p>
+                Cute aesthetic dresses, stylish outfits and trendy fashion wear.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <h3>👟 Footwear</h3>
+
+            <p>
+                Stylish shoes, sneakers, sandals and premium footwear collection.
+            </p>
+        </div>
+
+        <div class="category-card">
+            <h3>👜 Accessories</h3>
+
+            <p>
+                Bags, watches, jewellery and beautiful fashion accessories.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BRAND LOGOS -->
+
+<div class="brand-section">
+
+    <h2 class="brand-title">💕 Brands We Love 💕</h2>
+
+    <div class="brand-flex">
+
+        <div class="brand-circle">
+            <img src="ocean_logo.jpg">
+        </div>
+
+        <div class="brand-circle">
+            <img src="adidas.jpg">
+        </div>
+
+        <div class="brand-circle">
+            <img src="nike.jpg">
+        </div>
+
+        <div class="brand-circle">
+            <img src="gg.jpg">
+        </div>
+
+        <div class="brand-circle">
+            <img src="golden_logo.jpg">
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CONTACT SECTION -->
+
+<div class="contact-section">
+
+    <h2>📱 Connect With Us 📱</h2>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <h3>📸 Instagram</h3>
+            <p>@majestystore_official</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>💬 WhatsApp</h3>
+            <p>+91 9821-098239</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>▶ YouTube</h3>
+            <p>MAJESTY STORE VLOGS</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- QUOTE -->
+
+<div class="quote-box">
+    “Style is a way to say who you are without speaking.” ✨
+</div>
+
+<!-- FLOATING ICONS -->
+
+<div class="floating" style="left:10%;">💖</div>
+<div class="floating" style="left:30%; animation-delay:2s;">🌸</div>
+<div class="floating" style="left:60%; animation-delay:4s;">✨</div>
+<div class="floating" style="left:85%; animation-delay:1s;">💕</div>
+
+</body>
+</html>

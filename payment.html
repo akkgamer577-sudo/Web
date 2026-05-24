@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment</title>
+
+<style>
+
+/* BODY BACKGROUND */
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: lightpink;
+    color: white;
+    background-attachment: fixed ;
+}
+
+/* MAIN BOX */
+.payment-box {
+    width: 85%;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 35px;
+    border-radius: 25px;
+    background-color:#ffe4ec;
+    color: black;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* TITLE */
+.payment-box h2 {
+    color: #ff6f91;
+    margin-bottom: 20px;
+}
+
+/* INPUT FIELDS */
+.payment-box input[type="text"] {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* OPTIONS */
+.options {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 15px 0;
+}
+
+/* EACH OPTION */
+.option {
+    background: #ffe4ec;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    
+}
+
+/* HOVER EFFECT */
+.option:hover {
+    background: #ffccd5;
+}
+
+/* PAY BUTTON */
+.pay-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 15px;
+    background: #ff6f91;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.pay-btn:hover {
+    background: #ff4d88;
+}
+
+/* NOTE */
+.note {
+    font-size: 12px;
+    margin-top: 12px;
+    color: gray;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="payment-box">
+    <h2>💖 Payment Page</h2>
+
+    <input type="text" placeholder="Card Holder Name">
+    <input type="text" placeholder="Card Number">
+    <input type="text" placeholder="Expiry Date">
+    <input type="text" placeholder="CVV">
+
+    <div class="options">
+
+        <label class="option">
+            <input type="radio" name="pay">
+            💳 Credit Card
+        </label>
+
+        <label class="option">
+            <input type="radio" name="pay">
+            🏦 Debit Card
+        </label>
+
+        <label class="option">
+            <input type="radio" name="pay">
+            📱 UPI
+        </label>
+
+        <label class="option">
+            <input type="radio" name="pay">
+            🌐 Net Banking
+        </label>
+
+    </div>
+
+    <button class="pay-btn">Pay Now 💕</button>
+
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MAJESTY STORE</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background:linear-gradient(to bottom,#fff0f7,#ffe4ef,#ffd6ea);
+    overflow-x:hidden;
+}
+
+/* FLOATING ANIMATION */
+
+.floating{
+    position:fixed;
+    font-size:22px;
+    opacity:0.4;
+    animation:float 7s linear infinite;
+    z-index:0;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) rotate(0deg);
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+    }
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    background:linear-gradient(to right,#ffb6d9,#ff8fc1,#ff6fa7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    padding:18px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 5px 15px rgba(255,105,180,0.3);
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    font-size:22px;
+    padding:10px 18px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.navbar a:hover{
+    background:white;
+    color:#ff4fa3;
+}
+
+/* HEADER */
+
+.header{
+    text-align:center;
+    padding:50px 20px;
+    position:relative;
+    z-index:2;
+}
+
+/* LOGO */
+
+.logo-circle{
+    width:150px;
+    height:150px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+    border:6px solid white;
+    box-shadow:0 5px 25px rgba(255,105,180,0.3);
+    background:white;
+}
+
+.logo-circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* STORE TITLE */
+
+.header h1{
+    margin-top:25px;
+    font-size:55px;
+    color:#ff4fa3;
+    text-shadow:0 0 12px white;
+}
+
+.header p{
+    margin-top:10px;
+    font-size:20px;
+    color:#777;
+}
+
+/* CARDS SECTION */
+
+.cards-section{
+    padding:30px;
+    position:relative;
+    z-index:2;
+}
+
+.card-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+/* CARD */
+
+.card{
+    width:340px;
+    background:white;
+    border-radius:35px;
+    overflow:hidden;
+    border:2px solid #ffd6e9;
+    box-shadow:0 10px 25px rgba(255,105,180,0.15);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+
+/* CARD BOTTOM */
+
+.card-bottom{
+    background:linear-gradient(to right,#ffb6d9,#ffd6ea);
+    padding:20px;
+    text-align:center;
+}
+
+/* BUTTON */
+
+.see-more{
+    display:inline-block;
+    text-decoration:none;
+    color:#ff4fa3;
+    background:white;
+    padding:12px 28px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.4s;
+}
+
+.see-more:hover{
+    background:#ff4fa3;
+    color:white;
+    transform:scale(1.08);
+}
+
+/* ABOUT STORE */
+
+.info-section{
+    margin:60px 20px;
+    background:white;
+    border-radius:35px;
+    padding:40px;
+    box-shadow:0 10px 25px rgba(255,105,180,0.12);
+    position:relative;
+    z-index:2;
+}
+
+.info-section h2{
+    text-align:center;
+    color:#ff4fa3;
+    font-size:42px;
+    margin-bottom:25px;
+}
+
+/* INFO FLEX */
+
+.info-flex{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+/* INFO BOX */
+
+.info-box{
+    width:260px;
+    background:linear-gradient(to bottom,#fff0f7,#ffdce9);
+    padding:25px;
+    border-radius:30px;
+    text-align:center;
+    transition:0.4s;
+    border:2px solid #ffd6e9;
+}
+
+.info-box:hover{
+    transform:translateY(-8px);
+}
+
+.info-box h3{
+    color:#ff4fa3;
+    margin-bottom:15px;
+    font-size:26px;
+}
+
+.info-box p{
+    color:#666;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:50px;
+    background:linear-gradient(to right,#ffb6d9,#ff8fc1,#ff6fa7);
+    padding:30px;
+    text-align:center;
+    color:white;
+}
+
+.footer h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.footer p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.navbar{
+    flex-wrap:wrap;
+}
+
+.card{
+    width:100%;
+    max-width:380px;
+}
+
+}
+
+@media(max-width:768px){
+
+.header h1{
+    font-size:36px;
+}
+
+.header p{
+    font-size:16px;
+}
+
+.logo-circle{
+    width:120px;
+    height:120px;
+}
+
+.navbar a{
+    font-size:18px;
+}
+
+.card img{
+    height:320px;
+}
+
+.info-section h2{
+    font-size:30px;
+}
+
+.footer h2{
+    font-size:25px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING ICONS -->
+
+<div class="floating" style="left:10%;">💖</div>
+<div class="floating" style="left:30%; animation-delay:2s;">🌸</div>
+<div class="floating" style="left:60%; animation-delay:4s;">✨</div>
+<div class="floating" style="left:85%; animation-delay:1s;">💕</div>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<a href="home.html">🏠 Home</a>
+
+<a href="shopping.html">🛍 Shopping</a>
+
+<a href="aboutus.html">💖 About Us</a>
+
+<a href="feedback.html">💬 Feedback</a>
+
+</div>
+
+<!-- HEADER -->
+
+<div class="header">
+
+<div class="logo-circle">
+<img src="ocean_logo.jpg">
+</div>
+
+<h1>💖 MAJESTY STORE 💖</h1>
+
+<p>
+Cute • Elegant • Premium • Aesthetic Fashion Collection
+</p>
+
+</div>
+
+<!-- CARDS SECTION -->
+
+<div class="cards-section">
+
+<div class="card-container">
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<img src="girl_modern.jpg">
+
+<div class="card-bottom">
+
+<a href="shopping.html" class="see-more">
+SEE MORE ✨
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<img src="girl_traditional.jpg">
+
+<div class="card-bottom">
+
+<a href="shopping.html" class="see-more">
+SEE MORE ✨
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<img src="diamond_heel.jpg">
+
+<div class="card-bottom">
+
+<a href="shopping.html" class="see-more">
+SEE MORE ✨
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="card">
+
+<img src="diamond_jewellery.jpg">
+
+<div class="card-bottom">
+
+<a href="shopping.html" class="see-more">
+SEE MORE ✨
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="card">
+
+<img src="stone_necklace.jpg">
+
+<div class="card-bottom">
+
+<a href="shopping.html" class="see-more">
+SEE MORE ✨
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="card">
+
+<img src="Accessories.jpg">
+
+<div class="card-bottom">
+
+<a href="shopping.html" class="see-more">
+SEE MORE ✨
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- INFO SECTION -->
+
+<div class="info-section">
+
+<h2>✨ WHAT WE HAVE ✨</h2>
+
+<div class="info-flex">
+
+<div class="info-box">
+
+<h3>👗 Clothes</h3>
+
+<p>
+Traditional wear, modern dresses, cute aesthetic outfits and stylish fashion collection.
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>👠 Footwear</h3>
+
+<p>
+Premium heels, shoes, sneakers and trendy fashionable footwear collection.
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>💄 Makeup</h3>
+
+<p>
+Lipsticks, skincare, beauty products, glow kits and makeup essentials.
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>👜 Accessories</h3>
+
+<p>
+Jewellery, bags, watches and many cute accessories for every style.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+<h2>💕 OUR BRANDS 💕</h2>
+
+<p>
+ZARA • NIKE • ONLY • H&M • GUCCI • S&A BLUE • KNEE TOE
+</p>
+
+</div>
+
+</body>
+</html>
